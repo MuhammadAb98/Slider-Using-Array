@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Pay & Get</title>
+    
+    <script>
+function showproducts()
+{  var products=[
+    {id:1,name:"Samsung",price:45000,photo:"sam.jpg"},
+    {id:2,name:"Nokia",price:35000,photo:"no.jpg"},
+    {id:3,name:"Car",price:600000,photo:"car.jpg"}
+]
+   var image=document.getElementById("pic");
+   var name=document.getElementById("proname")
+   var product_price=document.getElementById("proprice");
+
+   var product_range=document.getElementById("range");
+   
+   image.src=products[product_range.value].photo;
+   name.innerHTML=products[product_range.value].name;
+   product_price.innerHTML=products[product_range.value].price
+
+ 
+}
+    </script>
+
+</head>
+
+<body>  
+
+<div> 
+
+    
+<table>
+    <tr>
+        <td>
+            <img src="" id="pic" width="200" height="200">
+        </td> 
+    </tr>
+    <tr>
+        <td>Product Name</td>
+        <td id="proname"></td> 
+    </tr>
+    <tr>
+        <td>Product Price</td>
+        <td id="proprice"></td> 
+    </tr>
+</table>
+<div>
+    <input type="range" id="range" min="0" max="2" onchange="showproducts()">
+    
+</div>
+</div>
+
+</body>
+</html>
